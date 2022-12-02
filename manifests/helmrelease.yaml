@@ -31,7 +31,7 @@ spec:
   values:
     xsoar_image:
       repository: "###ZARF_CONST_XSOAR_REPOSITORY###"
-      tag: "###ZARF_CONST_FUSE_TAG###"
+      tag: "###ZARF_CONST_XSOAR_TAG###"
     fuse_image:
       repository: "###ZARF_CONST_FUSE_REPOSITORY###"
       tag: "###ZARF_CONST_FUSE_TAG###"
