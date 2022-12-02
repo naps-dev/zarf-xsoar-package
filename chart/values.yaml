@@ -1,12 +1,12 @@
 # Default values for suricata.
 replicaCount: 1
 
-xsoar-image:
+xsoar_image:
   repository: xsoar-registry.pan.dev/demisto/server
   pullPolicy: IfNotPresent
   tag: 6.5.0.2459961-podman
 
-fuse-image:
+fuse_image:
   repository: soolaugust/fuse-device-plugin
   pullPolicy: IfNotPresent
   tag: v1.0

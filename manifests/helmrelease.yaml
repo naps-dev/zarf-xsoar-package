@@ -29,9 +29,9 @@ spec:
     timeout: 30m
     cleanupOnFail: false
   values:
-    xsoar-image:
+    xsoar_image:
       repository: "###ZARF_CONST_XSOAR_REPOSITORY###"
       tag: "###ZARF_CONST_FUSE_TAG###"
-    fuse-image:
+    fuse_image:
       repository: "###ZARF_CONST_FUSE_REPOSITORY###"
       tag: "###ZARF_CONST_FUSE_TAG###"

@@ -20,7 +20,7 @@ spec:
     spec:
       automountServiceAccountToken: false
       containers:
-      - image: "{{ .Values.xsoar-image.repository }}:{{ .Values.xsoar-image.tag }}"
+      - image: "{{ .Values.xsoar_image.repository }}:{{ .Values.xsoar_image.tag }}"
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
