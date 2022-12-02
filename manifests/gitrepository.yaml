@@ -5,6 +5,6 @@ metadata:
   namespace: xsoar
 spec:
   interval: 1m
-  url: https://github.com/naps-dev/zarf-xsoar-pkg.git
+  url: https://github.com/naps-dev/zarf-xsoar-package.git
   ref:
     branch: "###ZARF_VAR_BRANCH###"

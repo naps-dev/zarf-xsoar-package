@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: xsoar-ui
+  namespace: xsoar
+spec:
+  gateways:
+  - istio-system/public
+  hosts:
+  - podinfo.bigbang.dev
+  http:
+  - route:
+    - destination:
+        host: xsoar-server-pod.xsoar.svc.cluster.local
+        port:
+          number: 443
