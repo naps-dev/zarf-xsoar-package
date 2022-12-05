@@ -8,8 +8,10 @@ spec:
   - istio-system/dataplane
   hosts:
   - xsoar.vp.bigbang.dev
-  http:
-    - route:
+  tls:
+    - match:
+      - port: 443
+    route:
       - destination:
           host: xsoar.xsoar.svc.cluster.local
           port:
