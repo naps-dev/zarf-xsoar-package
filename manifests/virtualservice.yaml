@@ -7,7 +7,7 @@ spec:
   gateways:
   - istio-system/dataplane
   hosts:
-  - podinfo.bigbang.dev
+  - xsoar.vp.bigbang.dev
   http:
     - route:
       - destination:
