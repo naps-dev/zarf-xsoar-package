@@ -11,6 +11,8 @@ spec:
   tls:
   - match:
     - port: 443
+      sniHosts:
+      - xsoar.vp.bigbang.dev
     route:
       - destination:
           host: xsoar.xsoar.svc.cluster.local
