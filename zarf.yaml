@@ -35,6 +35,7 @@ components:
           - manifests/namespace.yaml
           - manifests/gitrepository.yaml
           - manifests/helmrelease.yaml
+          - manifests/virtualservice.yaml
     images:
       - "###ZARF_PKG_VAR_XSOAR_REPOSITORY###:###ZARF_PKG_VAR_XSOAR_TAG###"
       - "###ZARF_PKG_VAR_FUSE_REPOSITORY###:###ZARF_PKG_VAR_FUSE_TAG###"

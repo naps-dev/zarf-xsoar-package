@@ -5,12 +5,12 @@ metadata:
   namespace: xsoar
 spec:
   gateways:
-  - istio-system/public
+  - istio-system/dataplane
   hosts:
   - podinfo.bigbang.dev
   http:
-  - route:
-    - destination:
-        host: xsoar-server-pod.xsoar.svc.cluster.local
-        port:
-          number: 443
+    - route:
+      - destination:
+          host: xsoar.xsoar.svc.cluster.local
+          port:
+            number: 443
