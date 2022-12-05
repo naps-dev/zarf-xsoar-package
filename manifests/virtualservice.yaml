@@ -5,9 +5,9 @@ metadata:
   namespace: xsoar
 spec:
   gateways:
-  - istio-system/dataplane
+    - istio-system/dataplane
   hosts:
-  - xsoar.vp.bigbang.dev
+    - xsoar.vp.bigbang.dev
   tls:
   - match:
     - sniHosts:
