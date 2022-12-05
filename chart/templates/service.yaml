@@ -7,7 +7,7 @@ metadata:
   namespace: xsoar
 spec:
   ports:
-  - name: "webgui"
+  - name: "https-webgui"
     port: 8888
     targetPort: 443
   selector:

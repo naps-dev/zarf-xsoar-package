@@ -35,6 +35,9 @@ spec:
         ports:
         - containerPort: 80
           protocol: TCP
+        - containerPort: 443
+          protocol: TCP
+          name: "https-webgui"
         readinessProbe:
           failureThreshold: 3
           httpGet:

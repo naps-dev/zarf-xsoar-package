@@ -10,8 +10,7 @@ spec:
   - xsoar.vp.bigbang.dev
   tls:
   - match:
-    - port: 443
-      sniHosts:
+    - sniHosts:
       - xsoar.vp.bigbang.dev
     route:
       - destination:
