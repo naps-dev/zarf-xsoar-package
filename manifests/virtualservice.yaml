@@ -9,10 +9,10 @@ spec:
   hosts:
   - xsoar.vp.bigbang.dev
   tls:
-    - match:
-      - port: 443
-    route:
-      - destination:
-          host: xsoar.xsoar.svc.cluster.local
-          port:
-            number: 8888
+  - match:
+    - port: 443
+  route:
+    - destination:
+        host: xsoar.xsoar.svc.cluster.local
+        port:
+          number: 8888
