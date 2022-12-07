@@ -8,7 +8,7 @@ spec:
     - istio-system/dataplane
   hosts:
     - xsoar.vp.bigbang.dev
-  tls:
+  tcp:
   - match:
     - sniHosts:
       - xsoar.vp.bigbang.dev

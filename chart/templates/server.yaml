@@ -85,8 +85,8 @@ spec:
         persistentVolumeClaim:
           claimName: xsoar-volume
       # optional config map for /etc/demisto.conf
-      - name: demisto-conf 
-        configMap:
-          defaultMode: 511
-          name: demisto-conf
-          optional: true
+      # - name: demisto-conf 
+      #   configMap:
+      #     defaultMode: 511
+      #     name: demisto-conf
+      #     optional: true

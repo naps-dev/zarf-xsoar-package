@@ -9,18 +9,18 @@ spec:
     requests:
       storage: 3Gi
 
----
+# ---
 
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: xsoar-volume
-  labels:
-    type: local
-spec:
-  capacity:
-    storage: 10Gi
-  accessModes:
-    - ReadWriteOnce
-  hostPath:
-    path: "/mnt/data"
+# apiVersion: v1
+# kind: PersistentVolume
+# metadata:
+#   name: xsoar-volume
+#   labels:
+#     type: local
+# spec:
+#   capacity:
+#     storage: 10Gi
+#   accessModes:
+#     - ReadWriteOnce
+#   hostPath:
+#     path: "/mnt/data"
