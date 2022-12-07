@@ -17,3 +17,38 @@ spec:
           host: xsoar.xsoar.svc.cluster.local
           port:
             number: 8888
+
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: ServiceEntry
+metadata:
+  name: xsoar
+  namespace: xsoar
+spec:
+  hosts:
+    - xsoar.vp.bigbang.dev
+  ports:
+    - number: 80
+      name: http-port
+      protocol: HTTP
+      targetPort: 443
+    - number: 443
+      name: https-port
+      protocol: HTTPS
+  resolution: DNS
+
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: xsoar
+  namespace: nat
+spec:
+  host: xsoar.vp.bigbang.dev
+  trafficPolicy:
+    portLevelSettings:
+      - port:
+          number: 80
+        tls:
+          mode: SIMPLE
+          sni: xsoar.vp.bigbang.dev
