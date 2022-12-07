@@ -10,8 +10,8 @@ spec:
     - xsoar.vp.bigbang.dev
   tcp:
   - match:
-    - sniHosts:
-      - xsoar.vp.bigbang.dev
+    # - sniHosts:
+    #   - xsoar.vp.bigbang.dev
     route:
       - destination:
           host: xsoar.xsoar.svc.cluster.local
