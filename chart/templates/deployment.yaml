@@ -19,6 +19,15 @@ spec:
         app: xsoar-server-pod      
     spec:
       automountServiceAccountToken: false
+      initContainers:
+      - image: xsoar-registry.pan.dev/demisto/server:6.5.0.2583817-podman
+        imagePullPolicy: IfNotPresent
+        name: xsoar-otc-init
+        command: ["bash", "-c", "echo xsoar otc init ...;if [[ ! -d /var/lib/demisto-deploy/data ]]; then echo copying otc file; cp /var/lib/demisto/otc.conf.json /var/lib/demisto-deploy/.; fi; echo xsoar init completed;"]
+        volumeMounts:
+        - mountPath: /var/lib/demisto-deploy
+          mountPropagation: None
+          name: xsoar-persistent-storage
       containers:
       - image: "{{ .Values.xsoar_image.repository }}:{{ .Values.xsoar_image.tag }}"
         imagePullPolicy: IfNotPresent
