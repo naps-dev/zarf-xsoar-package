@@ -5,7 +5,7 @@ metadata:
   namespace: xsoar
 spec:
   hosts:
-    - "xsoar.###ZARF_VAR_BRANCH###"
+    - "xsoar.###ZARF_VAR_DOMAIN###"
   gateways:
     - istio-system/dataplane
   http:
