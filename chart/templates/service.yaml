@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    component: xsoar
+  name: xsoar
+  namespace: xsoar
+spec:
+  ports:
+  - name: "https-webgui"
+    port: 8888
+    targetPort: 80
+  selector:
+    app: xsoar-server-pod

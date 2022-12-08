@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: fuse-device-plugin
+ namespace: kube-system
+spec:
+ replicas: 1
+ selector:
+   matchLabels:
+     name: fuse-device-plugin-ds
+ template:
+   metadata:
+     labels:
+       name: fuse-device-plugin-ds
+   spec:
+     hostNetwork: true
+     containers:
+     - image: "{{ .Values.fuse_image.repository }}:{{ .Values.fuse_image.tag }}"
+       name: fuse-device-plugin-ctr
+       securityContext:
+         allowPrivilegeEscalation: false
+         capabilities:
+           drop: ["ALL"]
+       volumeMounts:
+         - name: device-plugin
+           mountPath: /var/lib/kubelet/device-plugins
+     volumes:
+       - name: device-plugin
+         hostPath:
+           path: /var/lib/kubelet/device-plugins
