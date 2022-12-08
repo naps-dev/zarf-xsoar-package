@@ -9,6 +9,10 @@ variables:
     default: "main"
     prompt: true
 
+  - name: DOMAIN
+    default: "vp.bigbang.dev"
+    prompt: false
+
 components:
   - name: xsoar
     description: "Palo Alto XSOAR"
