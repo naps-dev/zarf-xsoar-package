@@ -4,7 +4,7 @@ replicaCount: 1
 xsoar_image:
   repository: xsoar-registry.pan.dev/demisto/server
   pullPolicy: IfNotPresent
-  tag: 6.5.0.2583817-podman
+  tag: 6.5.0.2459961-podman
 
 fuse_image:
   repository: soolaugust/fuse-device-plugin
