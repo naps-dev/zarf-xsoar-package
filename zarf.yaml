@@ -28,5 +28,5 @@ components:
           - manifests/helmrelease.yaml
           - manifests/virtualservice.yaml
     images:
-      - "xsoar-registry.pan.dev/demisto/server:6.5.0.2459961-podman"
+      - "xsoar-registry.pan.dev/demisto/server:6.5.0.2583817-podman"
       - "soolaugust/fuse-device-plugin:v1.0"
